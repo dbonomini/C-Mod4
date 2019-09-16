@@ -1,0 +1,78 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Mod01Project01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Hello World
+            Console.WriteLine("Hello World");
+
+            // Numbers Tutorial
+            int a = 18;
+            int b = 6;
+            int c = a + b;
+            Console.Write("A + B = ");
+            Console.WriteLine(c);
+
+            double d = 18.7;
+            double e = 3.8;
+            double f = d / e;
+            Console.WriteLine($"d / e = {f}");
+
+            // Branches and Loops
+            int g = 5;
+            int h = 8;
+            int i = 2;
+            if(g > h || g > i)
+            {
+                Console.WriteLine("G is top dog");
+            }
+            else if(h > i)
+            {
+                Console.WriteLine("H is killing it");
+            }
+            else
+            {
+                Console.WriteLine("How did this happen");
+            }
+
+            int counter = 0;
+            do
+            {
+                Console.WriteLine($"Count: {counter}");
+                counter++;
+            } while (counter < 10);
+
+            for(int j = 0; j < 5; j++)
+            {
+                Console.WriteLine($"J: {j}");
+            }
+
+            // Lists tutorial
+            var names = new List<string> { "Dante", "Ana", "Felipe" };
+            foreach (var name in names)
+            {
+                Console.WriteLine($"Hello {name.ToUpper()}!");
+            }
+            names.Add("Bill");
+            names.Add("Makenna");
+            foreach (var name in names)
+            {
+                Console.WriteLine($"Hello {name.ToUpper()}!");
+            }
+
+            var index = names.IndexOf("Felipe");
+            if (index != -1)
+                Console.WriteLine($"The name {names[index]} is at index {index}");
+
+            var notFound = names.IndexOf("Not Found");
+            Console.WriteLine($"When an item is not found, IndexOf returns {notFound}");
+        }
+    }
+}
